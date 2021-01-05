@@ -1,0 +1,7 @@
+extern	int isdead(group_t g, list_t swaplist);
+extern	int terr(int rules, sqr_t s, list_t swaplist);
+extern	int higroup(group_t g);
+#ifndef SMALLCODE
+extern	void outgstat(sqr_t s);
+#endif
+

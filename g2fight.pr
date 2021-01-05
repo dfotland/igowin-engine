@@ -1,0 +1,28 @@
+#include "g2tree.h"
+/*extern	int save_fight(army_t army,int passval,int alpha, int urg_alpha); */
+extern	group_t weakestnbr(list_t grouplist);
+extern	tree_t canbekilled(group_t g,int maxnodes,int maxdepth);
+static	void readlife(group_t g,list_t groups,int live,int maxdepth, int maxsize, tree_t parent);
+void lifereading(int, unsigned int, int);
+extern	int trytolive(group_t g);
+list_t lifemoves(group_t g);
+extern list_t lifesetmoves(list_t groups);
+extern	int trytokillnbr(group_t goodgroup,group_t badgroup,int passval,int alpha);
+static	list_t killthreatened(group_t g);
+static	list_t makelife(group_t g);
+extern	list_t getkillmoves(group_t goodgroup,group_t badgroup);
+extern	int semgoodresult(group_t goodgroup,group_t badgroup);
+extern	int sembadresult(group_t goodgroup,group_t badgroup);
+extern	int liveresult(group_t goodgroup,group_t badgroup);
+extern	int stopliveresult(group_t goodgroup,group_t badgroup);
+extern	int killresult(group_t goodgroup,group_t badgroup);
+extern	int stopkillresult(group_t goodgroup,group_t badgroup);
+static	list_t getsemeaimoves(group_t goodgroup,group_t badgroup);
+/* static	void fight(sqr_t goods,sqr_t bads,int goodgoal,int badgoal,int *move,int *score,int depth,int firstmove,int alpha,int beta,int color); */
+static	list_t killsem(group_t g);
+static	void semkillnbr(army_t army, army_t nbarmy,int val,int com);
+static	void semkillsem(army_t army,army_t a,int val, int com, int atyp, int amax);
+static	void filloutside(army_t army,army_t nbrarmy,int val);
+static	void makaneye(army_t army,army_t enemy,int val,int com);
+static	void getmorelibs(army_t army,army_t a,int val,int atknbr);
+extern	int semeai_result(army_t a1,army_t a2);

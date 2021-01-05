@@ -1,0 +1,8 @@
+extern	void radiaterun(list_t swaplist);
+extern	void radiateterr(list_t swaplist);
+extern	void radiatescore(void);
+extern	void radiatepiece(short runterv[363][2], sqr_t s,int gral,int c,int (*rtval)[26], double fac);
+extern	int evallibsterr(sqr_t s, list_t swaplist);
+extern	list_t surroundpoints(army_t army,sqr_t s);
+extern	list_t runpoints(army_t army,sqr_t s,int type);
+extern	int canrunhere(army_t army,sqr_t s);

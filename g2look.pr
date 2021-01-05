@@ -1,0 +1,14 @@
+extern	list_t genobvioussave(army_t army);
+extern	list_t genobviouskill(army_t army);
+extern	void stval(int move);
+extern	int cut_stones_th_val(group_t g,sqr_t s);
+extern	int badmove(sqr_t s);
+extern	void check_killed(sqr_t s);
+extern	int rule_applied(int rl,sqr_t s, int color,int param);
+extern	list_t obviousadjacentcap(int move, int ply);
+extern	void obviousattack(sqr_t s,list_t *movelist);
+extern	void obvioussave(group_t g,list_t *movelist);
+extern	void obviouscapture(group_t g,list_t *movelist);
+extern	int isacut(sqr_t s,int c);
+extern	void obviousblock(sqr_t s,sqr_t sn,list_t *movelist,int c);
+extern	void extendhane(sqr_t s,sqr_t sn,list_t *movelist,int c,sqr_t dir,sqr_t dir2);
